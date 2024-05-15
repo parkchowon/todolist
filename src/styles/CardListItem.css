@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Hi+Melody&family=IBM+Plex+Sans+KR&family=Poetsen+One&display=swap");
+
+.card-div {
+  min-width: 250px;
+  min-height: 200px;
+  width: 250px;
+  height: 200px;
+  background-color: antiquewhite;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  box-sizing: border-box;
+  margin-right: 35px;
+}
+
+.card-todo {
+  font-size: 18px;
+  width: 170px;
+  height: 90px;
+  margin-top: 30px;
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.card-close-btn {
+  position: absolute;
+  top: 6%;
+  left: 84%;
+}
+
+.card-done-btn {
+  width: 70%;
+  height: 35px;
+  font-size: 17px;
+  margin: 20px;
+  border-radius: 30px;
+}
