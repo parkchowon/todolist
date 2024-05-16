@@ -20,3 +20,14 @@
   display: flex;
   flex-direction: row;
 }
+
+.swiper {
+  width: 100%;
+  padding: 0 30px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

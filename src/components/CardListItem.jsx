@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+import { IoMdCloseCircle } from "react-icons/io";
 import "../styles/CardListItem.css";
+
 const CardListItem = (props) => {
   const [todolist, setTodolist] = useState(() => {
     const storage = localStorage.getItem("todolist");
@@ -36,9 +38,11 @@ const CardListItem = (props) => {
   return (
     <div className="card-div">
       <p className="card-todo">{props.todolist}</p>
-      <button className="card-close-btn" onClick={handleClickRemove}>
-        x
-      </button>
+      <IoMdCloseCircle
+        className="card-close-btn"
+        size="23"
+        onClick={handleClickRemove}
+      />
       <button className="card-done-btn" onClick={handleClickDone}>
         {props.isDone ? "취소" : "완료"}
       </button>

@@ -16,7 +16,8 @@ const Header = () => {
 
   //form 함수
   const handleSubmit = (e) => {
-    inputVerify(e.target.input.value);
+    e.preventDefault();
+    inputVerify(e);
   };
 
   //input 값
@@ -27,19 +28,21 @@ const Header = () => {
 
   //유효성 검사
   const inputVerify = (e) => {
-    if (e === "") {
+    const value = e.target.input.value;
+    if (value === "") {
       setWarningText("빈칸입니다.");
-    } else if (e.length > 30) {
+    } else if (value.length > 30) {
       setWarningText("너무 깁니다");
     } else {
       console.log(e);
       const item = {
         id: Date.now(),
-        todolist: e,
+        todolist: value,
         isDone: false,
       };
       setTodolist([...todolist, item]);
       setText("");
+      window.location.reload();
     }
   };
 
@@ -60,7 +63,6 @@ const Header = () => {
             <button className="register-btn">등록</button>
           </form>
         </div>
-        <button className="change-btn">변경</button>
       </div>
       <p className="warning-text">{warningText}</p>
     </div>
