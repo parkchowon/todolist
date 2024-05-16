@@ -6,8 +6,8 @@ function App() {
   return (
     <div className="main-container">
       <Header />
-      <ListContainer working="Working" isDone={false} />
-      <ListContainer working="Done" isDone={true} />
+      <ListContainer title="Working" isDone={false} />
+      <ListContainer title="Done" isDone={true} />
     </div>
   );
 }

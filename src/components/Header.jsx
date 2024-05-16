@@ -3,8 +3,8 @@ import "../styles/Header.css";
 
 const Header = () => {
   const [todolist, setTodolist] = useState(() => {
-    const storage = localStorage.getItem("todolist");
-    return !storage ? [] : JSON.parse(storage);
+    const storages = localStorage.getItem("todolist");
+    return !storages ? [] : JSON.parse(storages);
   });
   const [text, setText] = useState("");
   const [warningText, setWarningText] = useState("");
